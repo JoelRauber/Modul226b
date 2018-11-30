@@ -1,4 +1,4 @@
-package inheritance_Polymorphism;
+package uebung_vererbung_v1;
 
 public class Car {
 
