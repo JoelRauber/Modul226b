@@ -48,4 +48,19 @@ public class Bus {
 	public void setComfort(String comfort) {
 		this.comfort = comfort;
 	}
+	
+	@Override
+	public String toString() {
+		
+		return "Ihr Bus ist ein und hat für " + passengerCapacity + " Personen platz.";
+	}
+	
+	//Overload
+	public void busView() {
+		System.out.println("Your bus is a normal bus and has a first class comfort.");
+	}
+	
+	public void busView(String BusService) {
+		System.out.println("Your bus is a " + busService + " bus and has a first class comfort.");
+	}
 }
