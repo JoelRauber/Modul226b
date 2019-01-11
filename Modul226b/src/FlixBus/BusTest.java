@@ -1,6 +1,7 @@
 package FlixBus;
 
-import org.junit.*;
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
 
 public class BusTest {
 	
