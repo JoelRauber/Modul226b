@@ -2,6 +2,8 @@ package remoteControl;
 
 public class DinkyCar implements Movable{
 	
+	private int fuel;
+	
 	@Override
 	public boolean start() {
 		return false;
@@ -13,11 +15,6 @@ public class DinkyCar implements Movable{
 	}
 
 	@Override
-	public boolean turn(int degrees) {
-		return false;
-	}
-
-	@Override
 	public double fuelRemaining() {
 		return 0;
 	}
@@ -25,6 +22,20 @@ public class DinkyCar implements Movable{
 	@Override
 	public boolean changeSpeed(double kmperhour) {
 		return false;
+	}
+	
+	@Override
+	public int remainingKm() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getFuel() {
+		return fuel;
+	}
+
+	public void setFuel(int fuel) {
+		this.fuel = fuel;
 	}
 
 }
