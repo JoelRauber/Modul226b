@@ -9,7 +9,7 @@ public class AtomarerMitarbeiter extends Mitarbeiter {
     public AtomarerMitarbeiter(String name, int telefonNr) {
         super(name, telefonNr);
     }
-
+    
     public int getMitarbeiterAnzahl() {
         return 1;
     }
