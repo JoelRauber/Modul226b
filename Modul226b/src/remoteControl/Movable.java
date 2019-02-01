@@ -1,10 +1,10 @@
 package remoteControl;
 
 public interface Movable {
-	
-	boolean start ();
-	void stop ();
-	double fuelRemaining ();
-	boolean changeSpeed (double kmperhour);
-	int remainingKm();
+	 public boolean start();
+	  public void stop();
+	  public boolean turn ( int degrees );
+	  public double fuelRemaining();
+	  int changeSpeed ( int kmperhour );
+	  String toString();
 }

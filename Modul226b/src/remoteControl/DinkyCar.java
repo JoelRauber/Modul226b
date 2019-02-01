@@ -2,48 +2,43 @@ package remoteControl;
 
 public class DinkyCar implements Movable{
 	
-	private int fuel;
-	private int weight;
-	
-	@Override
+	double fuel;
+	int richtung;
+	int speed;
+
+	public DinkyCar(double fuel, int richtung, int speed) {
+		this.fuel = fuel;
+		this.richtung = richtung;
+		this.speed = speed;
+	}
+
 	public boolean start() {
-		return false;
+		System.out.println("Auto wird gestartet");
+		return true;
 	}
 
-	@Override
 	public void stop() {
-		
+		System.out.println("Auto wird gestoppt");
 	}
 
-	@Override
+	public boolean turn(int degrees) {
+		richtung = richtung + degrees;
+		System.out.println("neue Richtung:" + richtung);
+		return true;
+	}
+
 	public double fuelRemaining() {
-		return 0;
-	}
-
-	@Override
-	public boolean changeSpeed(double kmperhour) {
-		return false;
-	}
-	
-	@Override
-	public int remainingKm() {
-		return 0;
-	}
-
-	public int getFuel() {
+		fuel = fuel - 30;
 		return fuel;
 	}
 
-	public void setFuel(int fuel) {
-		this.fuel = fuel;
+	@Override
+	public int changeSpeed(int kmperhour) {
+		speed = speed + 10;
+		return speed;
 	}
 
-	public int getWeight() {
-		return weight;
+	public String toString() {
+		return this.getClass().getSimpleName();
 	}
-
-	public void setWeight(int weight) {
-		this.weight = weight;
-	}
-
 }

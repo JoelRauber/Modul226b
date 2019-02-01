@@ -1,23 +1,24 @@
 package remoteControl;
 
-public class DinkyPlane implements Movable {
-	private double fuel;
-	private int richtung;
-	private int speed;
+public class DinkyShip implements Movable {
 
-	public DinkyPlane(double fuel, int richtung, int speed) {
+	double fuel;
+	int richtung;
+	int speed;
+
+	public DinkyShip(double fuel, int richtung, int speed) {
 		this.fuel = fuel;
 		this.richtung = richtung;
 		this.speed = speed;
 	}
 
 	public boolean start() {
-		System.out.println("Modellflugzeug wird gestartet");
+		System.out.println("Schiff wird gestartet");
 		return true;
 	}
 
 	public void stop() {
-		System.out.println("Modellflugzeug wird gestoppt");
+		System.out.println("Schiff wird gestoppt");
 	}
 
 	public boolean turn(int degrees) {
@@ -27,13 +28,13 @@ public class DinkyPlane implements Movable {
 	}
 
 	public double fuelRemaining() {
-		fuel = fuel - 10;
+		fuel = fuel - 30;
 		return fuel;
 	}
 
 	@Override
 	public int changeSpeed(int kmperhour) {
-		speed = speed +15;
+		speed = speed + 10;
 		return speed;
 	}
 
