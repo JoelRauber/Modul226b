@@ -1,3 +1,9 @@
+/**
+ * AtomarerMitarbeiter.java
+ * @author Joel & Michael
+ * @version 31.01.2019
+*/
+
 package composite;
 
 public class AtomarerMitarbeiter extends Mitarbeiter {

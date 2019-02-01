@@ -1,6 +1,13 @@
+/**
+ * Mitarbeiter.java
+ * @author Joel & Michael
+ * @version 31.01.2019
+*/
+
 package composite;
 
 public abstract class Mitarbeiter {
+    
     public abstract void print(String abstand);
     
     public abstract int getMitarbeiterAnzahl();
@@ -8,6 +15,13 @@ public abstract class Mitarbeiter {
     private String name;
     private int telefonNr;
 
+    /**
+     * Instantiates a new mitarbeiter.
+     *
+     * @param name the name
+     * @param telefonNr the telefon nr
+     */
+    
     public Mitarbeiter(String name, int telefonNr) {
         this.name = name;
         this.telefonNr = telefonNr;

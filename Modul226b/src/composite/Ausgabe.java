@@ -1,11 +1,27 @@
 package composite;
 
+/**
+ * Ausgabe.java
+ * @author Joel & Michael
+ * @version 31.01.2019
+*/
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Ausgabe {
+	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
+	
 	public static void main(String[] args) {
+		
+		//Hirarchie wird erstellt
+		
 		Abteilungsleiter abteilungsleiter1 = new Abteilungsleiter("W. Fischer", "Vertrieb", 001);
 	    abteilungsleiter1.add(new AtomarerMitarbeiter("P. Meier", 123));
 	    abteilungsleiter1.add(new AtomarerMitarbeiter("I. Schulz", 112));
@@ -31,6 +47,8 @@ public class Ausgabe {
 		boolean active = true;
 		
 		System.out.println("---------------Composite---------------\n");
+		
+		//Damit das Programm nicht nach einem Durchlauf abbricht.
 		
 		while(active) {
 			String thema = getThema();
@@ -58,6 +76,13 @@ public class Ausgabe {
 		}
 	}
 	
+	
+	/**
+	 * Methode damit Mitarbeiter hinzugefügt werden kann
+	 *
+	 * @param abteilungsleiter the abteilungsleiter
+	 */
+	
 	private static void addMitarbeiter(List<Abteilungsleiter> abteilungsleiter) {
 		System.out.println("Mitarbeiter hinzufügen");
 		
@@ -84,6 +109,15 @@ public class Ausgabe {
 		
 	}
 	
+	/**
+	 * Methode damit Mitarbeiter gelöscht werden kann.
+	 *
+	 * @param vorstand the vorstand
+	 * @param abteilungsleiter1 der erste Abteilungsleiter
+	 * @param abteilungsleiter2 der zweiter Abteilungsleiter
+	 * @param abteilungsleiter3 der dritte Abteilungsleiter
+	 */
+
 	private static void removeMitarbeiter(Abteilungsleiter vorstand, Abteilungsleiter abteilungsleiter1, Abteilungsleiter abteilungsleiter2, Abteilungsleiter abteilungsleiter3) {
 		
 		System.out.println("Abteilung löschen");
@@ -107,10 +141,23 @@ public class Ausgabe {
 				break;
 		}
 	}
+	
+	/**
+	 * Methode damit die Hierarchie ausgeben wird.
+	 *
+	 * @param vorstand, damit man den ganzen print()-Aufruf starten kann.
+	 */
 
 	public static void getHirarchy(Mitarbeiter vorstand) {
 	    vorstand.print("");
 	}
+	
+	
+	/**
+	 * Methode damit das Menu ausgegeben wird
+	 *
+	 * @return gibt das ausgewählte Thema zurück.
+	 */
 	
 	public static String getThema() {
 		boolean fehler = true;
@@ -121,7 +168,7 @@ public class Ausgabe {
 			
 			Scanner scanner = new Scanner(System.in);
 			System.out.println("Was wollen Sie machen?");
-			System.out.println("a) Hirarchy ansehen");
+			System.out.println("a) Hierarchie ansehen");
 			System.out.println("b) Atomarer Mitarbeiter hinzufügen");
 			System.out.println("c) Abteilung löschen");
 			System.out.println("d) Verlassen");
